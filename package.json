@@ -1,0 +1,21 @@
+{
+  "name": "depscout",
+  "version": "1.0.0",
+  "description": "A CLI to visualize dependencies in TypeScript/JavaScript projects",
+  "main": "src/index.ts",
+  "type": "module",
+  "author": "André Pereira",
+  "license": "MIT",
+  "scripts": {
+    "start": "bun run src/index.ts"
+  },
+  "bin": {
+    "dep-viz": "src/index.ts"
+  },
+  "dependencies": {
+    "@swc/core": "^1.7.36",
+    "@swc/helpers": "^0.5.13",
+    "@types/bun": "^1.1.11",
+    "read-pkg": "^5.2.0"
+  }
+}
