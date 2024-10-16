@@ -1,0 +1,1 @@
+ node_modules/**   # Exclude all files in node_modules directories
