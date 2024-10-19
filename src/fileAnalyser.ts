@@ -18,7 +18,7 @@ export function loadIgnorePatterns(ignoreFilePath: string): string[] {
 export function getAllFiles(
   dirPath: string,
   arrayOfFiles: string[] = [],
-  ignorePatterns: string[] = []
+  ignorePatterns: string[] = [],
 ): string[] {
   const files = fs.readdirSync(dirPath);
 
