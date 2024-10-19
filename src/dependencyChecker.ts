@@ -1,9 +1,16 @@
+import fs from "fs";
 import path from "path";
 import readPkg from "read-pkg";
 
 // Function to check for dependencies in package.json
 export async function checkDependencies(cwd: string) {
   try {
+    const packageJsonPath = path.resolve(cwd, "package.json");
+    // Check if package.json exists
+    if (!fs.existsSync(packageJsonPath)) {
+      throw new Error("package.json not found");
+    }
+
     const packageJson = await readPkg({
       cwd: path.resolve(cwd), // Read from the provided project directory
     });
